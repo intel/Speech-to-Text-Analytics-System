@@ -1,0 +1,31 @@
+# Following is pipeline configuration
+# Valid compute_types ------------------
+# For Whisperx Transcription: fp32
+# For HF Whisper Transcription: fp32, bf16. For, int8 is work in progress
+# For Whisperx Alignment: fp32
+# For Diarization: fp32
+# -----------------------------------------
+# To disable diarization, set is_diarization to false
+# To diable alignment, set is_alignment to false
+
+name: 'ASR Pipeline'
+is_diarization: true
+is_alignment: true
+transcription:
+  topology: tiny # Only FasterWhisper is supported
+  compute_type: fp32
+  backend: FasterWhisper # HFWhisper or whisperx
+  batch_size: 16 # Chunk batch size for long-form transcription
+  device: cpu
+  language: en
+alignment: # not in use for live transcription
+  compute_type: fp32
+  language: en
+  backend: whisperx_alignment
+  device: cpu
+diarization:  # not in use for live transcription
+  pipeline_config: pyannote/speaker-diarization-3.1
+  use_auth_token: false
+  compute_type: fp32
+  device: cpu
+  backend: pyannote_diarization

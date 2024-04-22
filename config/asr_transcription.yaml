@@ -1,0 +1,20 @@
+name: 'ASR Pipeline'
+is_diarization: false
+is_alignment: false
+transcription:
+  topology: distil-whisper/distil-large-v3 #distil-whisper/distil-large-v2 or openai/whisper-large-v2 ...
+  compute_type: fp32
+  backend: HFWhisper # HFWhisper or whisperx
+  batch_size: 16 # Chunk batch size for long-form transcription
+  device: cpu
+alignment:
+  compute_type: fp32
+  language: en
+  backend: whisperx_alignment
+  device: cpu
+diarization:
+  pipeline_config: pyannote/speaker-diarization-3.1 #models/pyannote-diarization-3.0/config.yaml
+  use_auth_token: true
+  compute_type: fp32
+  device: cpu
+  backend: pyannote_diarization
