@@ -1,5 +1,5 @@
-# Intel Optimized Speech Analytics System using OpenAI Whisper
-Intel optimized Speech Analytics System performs voice-to-text transcription, diarization and speaker-aware transcription. Downstream tasks for associated analytics, such as listen-to-speak ratio, average talking speed, longest customer monologue, switches per conversation, average pause time and keyword spotting are computed using speaker-aware transcription.
+# Intel Optimized Speech-to-Text Analytics System using OpenAI Whisper
+Intel optimized Speech-to-Text Analytics System performs voice-to-text transcription, diarization and speaker-aware transcription. Downstream tasks for associated analytics, such as listen-to-speak ratio, average talking speed, longest customer monologue, switches per conversation, average pause time and keyword spotting are computed using speaker-aware transcription.
 
 ![main_dia_asr](assets/pipeline.png)
 
