@@ -1,3 +1,15 @@
+PROJECT NOT UNDER ACTIVE MANAGEMENT
+
+This project will no longer be maintained by Intel.
+
+Intel has ceased development and contributions including, but not limited to, maintenance, bug fixes, new releases, or updates, to this project.
+
+Intel no longer accepts patches to this project.
+
+If you have an ongoing need to use this project, are interested in independently developing it, or would like to maintain patches for the open source software community, please create your own fork of this project.
+
+Contact: webadmin@linux.intel.com
+
 # Intel® Optimized Speech-to-Text Analytics System using OpenAI Whisper
 Intel optimized Speech-to-Text Analytics System performs voice-to-text transcription, diarization and speaker-aware transcription. Downstream tasks for associated analytics, such as listen-to-speak ratio, average talking speed, longest customer monologue, switches per conversation, average pause time and keyword spotting are computed using speaker-aware transcription.
 
